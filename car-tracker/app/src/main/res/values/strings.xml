@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Sokhanvar</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="setting_help_text">لطفا شماره سیم کارت دستگاه را با دقت در کادر زیر وارد کنید.</string>
+    <string name="title_activity_maewewps">Map</string>
+    <string name="title_activity_maps_activityssss">Map</string>
+</resources>

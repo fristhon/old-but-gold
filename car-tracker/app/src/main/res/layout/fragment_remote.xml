@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:gravity="center"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    android:padding="10dp"
+
+    tools:context="project.activity.MainActivity">
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight=".3"
+      android:background="#e0e0e0"
+      android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="خانه"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="@dimen/_14ssp"
+        android:typeface="monospace"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="نام محل نصب :"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="@dimen/_14ssp"
+        android:typeface="monospace"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight=".5"
+      android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvSim"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="+989384885525"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="@dimen/_12ssp"
+            android:typeface="monospace"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="شماره ثبت شده :"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="@dimen/_12ssp"
+            android:typeface="monospace"/>
+
+      </LinearLayout>
+
+    </RelativeLayout>
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="3"
+      android:gravity="center"
+      android:orientation="horizontal"
+      android:paddingTop="70dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+        <com.github.zagum.switchicon.SwitchIconView
+            android:id="@+id/switchSecurity"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            app:si_disabled_color="#3b2f2f"
+            app:si_tint_color="@android:color/background_light"
+            app:srcCompat="@drawable/ic_use_car_security_open_black"/>
+
+        <ToggleButton
+            android:id="@+id/tglSecurity"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/switchSecurity"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/my_button"
+            android:textOff="فعال"
+            android:textOn="غیرفعال"
+            android:textSize="@dimen/_18ssp"/>
+
+      </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+        <ToggleButton
+            android:id="@+id/tglCar"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/switchCar"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/my_button"
+            android:textOff="روشن"
+            android:textOn="خاموش"
+            android:textSize="@dimen/_18ssp"/>
+
+        <com.github.zagum.switchicon.SwitchIconView
+            android:id="@+id/switchCar"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            app:si_disabled_color="#351818"
+            app:si_tint_color="@android:color/background_light"
+            app:srcCompat="@drawable/taxi"/>
+      </RelativeLayout>
+
+    </LinearLayout>
+
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:orientation="horizontal">
+
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/fButton"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="wrap_content"
+        android:text="تایید"
+        android:textColor="#fff"
+
+        android:textSize="@dimen/_18ssp"/>
+
+
+  </LinearLayout>
+</LinearLayout>

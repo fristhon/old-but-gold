@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/md_blue_grey_200"
+  android:gravity="center"
+  android:orientation="vertical"
+  tools:context=".MultiActivity"
+  android:layoutDirection="ltr"
+
+  >
+
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <ImageButton
+      android:id="@+id/btnEdit1"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="@null"
+      android:tag="1"
+      app:srcCompat="@drawable/ic_settings_black_24dp"/>
+
+    <com.lid.lib.LabelButtonView
+      android:id="@+id/btnHome1"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="3"
+      android:background="@drawable/my_button"
+      android:gravity="center"
+      android:tag="1"
+      android:text="خانه"
+      android:textColor="#ffffff"
+      android:textSize="@dimen/_16ssp"
+      app:label_backgroundColor="#C2185B"
+      app:label_distance="@dimen/_18sdp"
+      app:label_height="@dimen/_35sdp"
+      app:label_orientation="RIGHT_TOP"
+      app:label_text="1"
+      app:label_textSize="@dimen/_12ssp"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <ImageButton
+      android:id="@+id/btnEdit2"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="@null"
+      android:tag="2"
+      app:srcCompat="@drawable/ic_settings_black_24dp"/>
+
+    <com.lid.lib.LabelButtonView
+      android:id="@+id/btnHome2"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="3"
+      android:background="@drawable/my_button"
+      android:gravity="center"
+      android:tag="2"
+      android:text="خانه"
+      android:textColor="#ffffff"
+      android:textSize="@dimen/_16ssp"
+      app:label_backgroundColor="#C2185B"
+      app:label_distance="@dimen/_18sdp"
+      app:label_height="@dimen/_35sdp"
+      app:label_orientation="RIGHT_TOP"
+      app:label_text="2"
+      app:label_textSize="@dimen/_12ssp"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <ImageButton
+      android:id="@+id/btnEdit3"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="@null"
+      android:tag="3"
+      app:srcCompat="@drawable/ic_settings_black_24dp"/>
+
+    <com.lid.lib.LabelButtonView
+      android:id="@+id/btnHome3"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="3"
+      android:background="@drawable/my_button"
+      android:gravity="center"
+      android:tag="3"
+      android:text="خانه"
+      android:textColor="#ffffff"
+      android:textSize="@dimen/_16ssp"
+      app:label_backgroundColor="#C2185B"
+      app:label_distance="@dimen/_18sdp"
+      app:label_height="@dimen/_35sdp"
+      app:label_orientation="RIGHT_TOP"
+      app:label_text="3"
+      app:label_textSize="@dimen/_12ssp"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <ImageButton
+      android:id="@+id/btnEdit4"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="@null"
+      android:tag="4"
+      app:srcCompat="@drawable/ic_settings_black_24dp"/>
+
+    <com.lid.lib.LabelButtonView
+      android:id="@+id/btnHome4"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="3"
+      android:background="@drawable/my_button"
+      android:gravity="center"
+      android:tag="4"
+      android:text="خانه"
+      android:textColor="#ffffff"
+      android:textSize="@dimen/_16ssp"
+      app:label_backgroundColor="#C2185B"
+      app:label_distance="@dimen/_18sdp"
+      app:label_height="@dimen/_35sdp"
+      app:label_orientation="RIGHT_TOP"
+      app:label_text="4"
+      app:label_textSize="@dimen/_12ssp"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <ImageButton
+      android:id="@+id/btnEdit5"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="@null"
+      android:tag="5"
+      app:srcCompat="@drawable/ic_settings_black_24dp"/>
+
+    <com.lid.lib.LabelButtonView
+      android:id="@+id/btnHome5"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="3"
+      android:background="@drawable/my_button"
+      android:gravity="center"
+      android:tag="5"
+      android:text="خانه"
+      android:textColor="#ffffff"
+      android:textSize="@dimen/_16ssp"
+      app:label_backgroundColor="#C2185B"
+      app:label_distance="@dimen/_18sdp"
+      app:label_height="@dimen/_35sdp"
+      app:label_orientation="RIGHT_TOP"
+      app:label_text="5"
+      app:label_textSize="@dimen/_12ssp"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <ImageButton
+      android:id="@+id/btnEdit6"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="@null"
+      android:tag="6"
+      app:srcCompat="@drawable/ic_settings_black_24dp"/>
+
+    <com.lid.lib.LabelButtonView
+      android:id="@+id/btnHome6"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="3"
+      android:background="@drawable/my_button"
+      android:gravity="center"
+      android:tag="6"
+      android:text="خانه"
+      android:textColor="#ffffff"
+      android:textSize="@dimen/_16ssp"
+      app:label_backgroundColor="#C2185B"
+      app:label_distance="@dimen/_18sdp"
+      app:label_height="@dimen/_35sdp"
+      app:label_orientation="RIGHT_TOP"
+      app:label_text="6"
+      app:label_textSize="@dimen/_12ssp"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <ImageButton
+      android:id="@+id/btnEdit7"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="@null"
+      android:tag="7"
+      app:srcCompat="@drawable/ic_settings_black_24dp"/>
+
+    <com.lid.lib.LabelButtonView
+      android:id="@+id/btnHome7"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="3"
+      android:background="@drawable/my_button"
+      android:gravity="center"
+      android:tag="7"
+      android:text="خانه"
+      android:textColor="#ffffff"
+      android:textSize="@dimen/_16ssp"
+      app:label_backgroundColor="#C2185B"
+      app:label_distance="@dimen/_18sdp"
+      app:label_height="@dimen/_35sdp"
+      app:label_orientation="RIGHT_TOP"
+      app:label_text="7"
+      app:label_textSize="@dimen/_12ssp"/>
+
+  </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:custom="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@drawable/background"
+  android:gravity="center"
+  android:layoutDirection="ltr"
+  android:orientation="vertical"
+
+
+  tools:context=".MyMainActivity">
+
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight=".5"
+      android:background="#e0e0e0"
+      android:orientation="horizontal">
+
+      <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+          android:id="@+id/tvDate"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_centerInParent="true"
+          android:gravity="center"
+          android:text="96/11/30"
+          android:textAlignment="center"
+          android:textColor="#000"
+          android:textSize="@dimen/_10ssp"
+          android:typeface="monospace"/>
+      </RelativeLayout>
+
+      <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+          android:id="@+id/tvTime"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_centerInParent="true"
+          android:gravity="center"
+          android:text="22:00"
+          android:textAlignment="center"
+          android:textColor="#000"
+          android:textSize="@dimen/_10ssp"
+          android:typeface="monospace"/>
+
+
+      </RelativeLayout>
+
+      <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_centerInParent="true"
+          android:gravity="center"
+          android:maxLines="1"
+          android:text="آخرین به روز رسانی در :"
+          android:textAlignment="center"
+          android:textColor="#000"
+          android:textSize="@dimen/_10ssp"
+          android:typeface="monospace"/>
+
+      </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight=".2"
+      >
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".8"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+      <com.dx.dxloadingbutton.lib.LoadingButton
+          android:id="@+id/loading_btn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:contextClickable="false"
+          app:lb_btnColor="#8BC34A"
+          app:lb_btnText="به روز رسانی"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight=".2"
+      />
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/CardViewBatteryArc"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="5"
+        android:backgroundTint="#80FFFFFF"
+        android:foreground="?android:attr/selectableItemBackground">
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_weight="4.5"
+          android:gravity="center"
+          android:orientation="vertical"
+          android:padding="5dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+          <RelativeLayout
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+              <com.github.lzyzsd.circleprogress.DonutProgress
+                  android:id="@+id/prgOil"
+                  android:layout_width="@dimen/_70sdp"
+                  android:layout_height="@dimen/_70sdp"
+                  android:layout_centerHorizontal="true"
+                  app:donut_progress="100"/>
+
+              <TextView
+                  android:id="@+id/tvOil"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/prgOil"
+                  android:layout_centerHorizontal="true"
+                  android:text="سوخت باقی مانده"
+                  android:textAlignment="center"
+                  android:textColor="#000"
+                  android:textSize="@dimen/_12ssp"
+                  />
+            </LinearLayout>
+
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+              <android.support.v7.widget.AppCompatImageView
+                  android:id="@+id/imgCar"
+                  android:layout_width="match_parent"
+                  android:layout_height="@dimen/_70sdp"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerInParent="true"
+                  app:srcCompat="@drawable/ic_use_car_onn"/>
+
+              <TextView
+                  android:id="@+id/tvCar"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/imgCar"
+                  android:layout_centerHorizontal="true"
+                  android:text="خودرو روشن است"
+                  android:textAlignment="center"
+                  android:textColor="#000"
+                  android:textSize="@dimen/_12ssp"/>
+
+            </LinearLayout>
+
+            <!-- <ImageView
+               android:id="@+id/imgCar"
+               android:layout_width="@dimen/_70sdp"
+               android:layout_height="@dimen/_70sdp"
+               android:layout_centerHorizontal="true"
+               android:layout_centerInParent="true"
+               app:srcCompat="@drawable/ic_use_car_onn"/>-->
+
+          </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+          <RelativeLayout
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+              <ImageView
+                  android:id="@+id/imgDoor"
+                  android:layout_width="@dimen/_70sdp"
+                  android:layout_height="@dimen/_70sdp"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerInParent="true"
+                  app:srcCompat="@drawable/ic_lock_door_use"/>
+
+              <TextView
+                  android:id="@+id/tvDoor"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/imgDoor"
+                  android:layout_centerHorizontal="true"
+                  android:text="درب ها بسته است"
+                  android:textAlignment="center"
+                  android:textColor="#000"
+                  android:textSize="@dimen/_12ssp"/>
+
+            </LinearLayout>
+
+
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+              <ImageView
+                  android:id="@+id/imgAlarm"
+                  android:layout_width="@dimen/_70sdp"
+                  android:layout_height="@dimen/_70sdp"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerInParent="true"
+                  app:srcCompat="@drawable/ic_use_car_security_close_black"/>
+
+              <TextView
+                  android:id="@+id/tvAlarm"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/imgAlarm"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerInParent="true"
+                  android:text="سیستم امنیتی فعال است"
+                  android:textAlignment="center"
+                  android:textColor="#000"
+                  android:textSize="@dimen/_12ssp"/>
+            </LinearLayout>
+
+
+          </RelativeLayout>
+
+        </LinearLayout>
+
+      </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+      <android.support.design.widget.CoordinatorLayout
+          android:id="@+id/coordinatorLayout"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          />
+
+    </LinearLayout>
+
+
+  </LinearLayout>
+
+
+</RelativeLayout>
