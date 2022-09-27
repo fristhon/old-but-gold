@@ -1,0 +1,2740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        فروشگاه اینترنتی دیجی کالا
+    </title>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.flipTimer.js"></script>
+    <link href="css/flipTimer.css" rel="stylesheet">
+
+
+</head>
+
+<body class="yekan">
+
+    <style>
+        p,
+        a,
+        ul,
+        li,
+        a,
+        span,
+        div {
+            text-align: right;
+            direction: rtl;
+        }
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        body {
+            background: #eeeff1;
+            margin: 0;
+        }
+
+        @font-face {
+            font-family: yekan;
+            src: url('fonts/yekan.ttf') format('truetype'), url('/fonts/yekan.eot') format('embeded-opentype');
+        }
+
+        .yekan {
+            font-family: yekan;
+        }
+
+        .fontsm {
+            font-size: 11pt
+        }
+
+        .fontmd {
+            font-size: 12pt
+        }
+
+        .fontlg {
+            font-size: 13pt
+        }
+
+        #basket_top {
+            width: 190px;
+            height: 40px;
+            float: right
+        }
+
+        #basket_top_left {
+            width: 100px;
+            height: 100%;
+            background: #46a349;
+            float: right;
+            padding: 0 20px;
+            line-height: 35px
+        }
+
+        #basket_top_right {
+            width: 50px;
+            height: 100%;
+            background: #5cad5f url(images/basket_top.png) no-repeat center;
+            float: right
+        }
+
+        #search_top {
+            width: 480px;
+            height: 40px;
+            float: right;
+            margin-right: 10px;
+            position: relative
+        }
+    </style>
+
+
+    <header style="padding-top: 15px;background: #fff">
+
+        <div id="header" style="width: 1200px;height: 100px;margin: 0 auto">
+
+
+            <div id="header_right" style="width: 720px;height: 100px;float: right">
+
+                <div id="header _right_top" style="height: 40px">
+
+                    <span
+                        style="width: 14px;height: 18px;background: url(images/slices.png) no-repeat center;display: block;float: right;background-position: -309px -31px !important"></span>
+
+
+                    <a class="fontsm" href="/login" style="float: right;margin-right: 10px;color: #000">
+
+                        فروشگاه اینترنتی دیجی کالا،وارد شوید
+
+                    </a>
+
+                    <span
+                        style="width: 14px;height: 18px;background: url(images/slices.png) no-repeat center;display: block;float: right;margin-right: 20px;background-position: -276px -31px !important;vertical-align: middle"></span>
+
+                    <a class="fontsm" href="/register" style="margin-right: 10px;color: #000">
+                        ثبت نام کنید
+                    </a>
+
+
+                </div>
+                <div id="header _right_bottom" style="height: 50px;">
+
+                    <div id="basket_top">
+                        <div id="basket_top_right"></div>
+                        <div id="basket_top_left">
+
+                            <span class="fontsm" style="color: white">سبد خرید</span>
+                            <span class="fontsm"
+                                style="width: 25px;height: 25px;background:#5fbf63;color: #fff;text-align: center;display:block;float: left;line-height: 25px;margin-top: 7px;border-radius: 100%">0</span>
+
+
+                        </div>
+
+                    </div>
+                    <div id="search_top">
+                        <input type="text" class="yekan fontsm"
+                            style="width: 480px;height: 35px;border: 1px solid #eee;;margin-top: 1px;padding-right: 10px;color:#70706f"
+                            placeholder="محصول، دسته یا برند مورد نظرتان را جستجو کنید ...">
+
+                        <span
+                            style="width: 42px;height: 37px;background: #969ba8 url(images/search.png)no-repeat center;display: block;position: absolute;left: -12px;top:2px"></span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div id="header_left" style="float: left;">
+                <img src="images/logo.png">
+
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+    <style>
+        nav {
+
+            box-shadow: 1px 3px 4px #ccc;
+            -webkit-box-shadow: 1px 3px 4px #ccc;
+            -moz-box-shadow: 1px 3px 4px #ccc;
+
+        }
+
+        li {
+            list-style: none
+        }
+
+        #menu_top>ul {
+            position: relative;
+            padding: 0;
+        }
+
+        #menu_top>ul>li {
+            float: right;
+            height: 40px;
+        }
+
+        #menu_top>ul>li>a {
+            padding: 0 10px;
+            display: block;
+            line-height: 36px;
+            height: 40px;
+        }
+
+        ul {
+            margin: 0
+        }
+
+        .menu_down_icon {
+            width: 10px;
+            height: 10px;
+            background: url(images/slices.png) center no-repeat;
+            background-position: -36px -543px;
+            display: inline-block;
+            margin-top: 16px;
+            margin-right: 25px;
+            position: absolute;
+
+        }
+
+        #menu_top>ul>li>ul>li {
+            float: right
+        }
+
+        #menu_top>ul>li>ul>li>a {
+            padding: 5px 10px;
+            display: block;
+        }
+
+        #menu_top>ul>li>ul {
+            position: absolute;
+            right: 0;
+            background: #fff;
+            width: 1200px;
+            padding: 0;
+            box-shadow: 0 2px 3px #eee;
+            display: none;
+        }
+
+        .topmenu3_col {
+            width: 299px;
+            height: 300px;
+            float: right;
+            background: #fff;
+            border-left: 1px solid #eeeff1;
+            border-top: 1px solid #eeeff1;
+
+        }
+
+        .topmenu3_col_ul li {
+            padding-right: 15px;
+
+        }
+
+        .topmenu3_col_ul li:first-child {
+            padding-right: 5px;
+        }
+
+        .submenu3 {
+            display: none;
+
+        }
+
+        .active-menu {
+            background: #fff;
+            box-shadow: 0 0 3px #eee;
+
+        }
+
+        .active-menu>a {
+            color: #f14e54;
+
+        }
+
+        #menu_top a {
+            cursor: pointer;
+        }
+
+        .images_topmenu3 {
+            width: 379px;
+            height: 335px;
+            position: absolute;
+            left: 0;
+            bottom: -280px
+        }
+
+        #navigation {
+            width: 100%;
+            height: 40px;
+            background: #f7f8fa;
+            border-top: 1px solid #ecf3f3;
+            box-shadow: 0 2px 3px #aaa;
+
+        }
+
+        #menu_top {
+            width: 1200px;
+            height: 40px;
+            margin: auto;
+        }
+
+        .submenu3 {
+            width: 1200px;
+            height: 100%;
+            background: #fff;
+            position: absolute;
+            right: 0;
+        }
+
+        #dgmag_menu_top {
+            width: 96px;
+            height: 21px;
+            background: url(images/slices.png) no-repeat center;
+            background-position: -738px -600px;
+            display: block;
+            float: left;
+            margin-top: 9px;
+        }
+
+        .firstli {
+            width: 130px
+        }
+    </style>
+
+
+    <nav id="navigation" class="yekan">
+
+        <div id="menu_top">
+
+
+            <ul>
+                <span id="dgmag_menu_top"></span>
+
+                <li class="firstli" data-time="1">
+                    <a>
+                        کالای دیجیتال
+                        <span id="ss" class="menu_down_icon"></span>
+                    </a>
+                    <ul>
+                        <li data-time="3">
+                            <a>
+
+                                موبایل
+                            </a>
+                            <div class="submenu3">
+
+                                <div class="topmenu3_col">
+
+                                    <ul class="topmenu3_col_ul" style="padding-right: 10px;">
+                                        <li>
+                                            گوشی موبایل
+                                        </li>
+                                        <li>
+                                            Apple
+                                        </li>
+                                        <li>
+                                            Samsun
+                                        </li>
+
+
+                                    </ul>
+
+
+                                </div>
+                                <div class="topmenu3_col"></div>
+                                <div class="topmenu3_col"></div>
+                                <div class="topmenu3_col"></div>
+                                <img class="images_topmenu3" src="images/mobile.png">
+
+
+                            </div>
+
+
+                        </li>
+                        <li>
+                            <a>
+
+                                تبلت و کتابخوان
+                            </a>
+                            <div class="submenu3"
+                                style="width: 1200px;height: 100%;background: #fff;position: absolute;right: 0">
+
+                                <div class="topmenu3_col">
+
+                                    <ul class="topmenu3_col_ul" style="padding-right: 10px">
+                                        <li>
+                                            تبلت
+                                        </li>
+                                        <li>
+                                            Apple
+                                        </li>
+                                        <li>
+                                            Samsung
+                                        </li>
+
+
+                                    </ul>
+
+
+                                </div>
+                                <div class="topmenu3_col"></div>
+                                <div class="topmenu3_col"></div>
+                                <div class="topmenu3_col"></div>
+                                <img src="images/tablet-ebook-reader.png" width="379" height="335"
+                                    style="position: absolute;left: 0px;bottom: -280px">
+
+
+                            </div>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li class="firstli" data-time="2">
+                    <a>
+                        لوازم خانگی
+                        <span class="menu_down_icon"></span>
+                    </a>
+
+                    <ul>
+                        <li data-time="4">
+                            <a>
+                                صوتی و تصویری
+                            </a>
+                            <div class="submenu3"
+                                style="width: 1200px;height: 100%;background: #fff;position: absolute;right: 0">
+
+                                <div class="topmenu3_col">
+
+                                    <ul class="topmenu3_col_ul" style="padding-right: 10px">
+                                        <li>
+                                            تلویزیون
+                                        </li>
+                                        <li>
+                                            کوچیکتر از 32
+                                        </li>
+                                        <li>
+                                            کوچیکتر از 42
+                                        </li>
+
+
+                                    </ul>
+
+
+                                </div>
+                                <div class="topmenu3_col"></div>
+                                <div class="topmenu3_col"></div>
+                                <div class="topmenu3_col"></div>
+                                <img class="images_topmenu3" src="images/video-audio-entertainment.png">
+
+
+                            </div>
+                        </li>
+                        <li>
+                            <a>
+                                لوازم خانگی برقی
+                            </a>
+                        </li>
+
+
+                    </ul>
+
+
+                </li>
+
+            </ul>
+
+
+        </div>
+
+    </nav>
+    <style>
+        #main {
+            width: 1200px;
+            margin: 10px auto;
+        }
+
+        #sidbar_right {
+            width: 290px;
+            height: 1000px;
+            float: right
+        }
+
+        #sidbar_right_ul {
+            padding: 0
+        }
+
+        .images_sidbar {
+            border-radius: 4px;
+            float: right;
+            margin-bottom: 10px
+        }
+
+        #sidbar_right {
+            width: 290px;
+            height: 1300px;
+            float: right;
+
+        }
+
+        #last_news {
+            width: 290px;
+            background: #fff;
+            margin-top: 10px;
+            border-radius: 4px;
+            overflow: hidden
+        }
+
+        #last_news h3 {
+            margin: 0;
+            height: 40px;
+            background: #f2f4f5;
+            color: #62665e;
+            padding-right: 10px;
+            line-height: 36px
+        }
+
+        #last_news ul li a {
+            padding: 8px;
+            display: block;
+            float: right;
+        }
+
+        #last_news .col_right {
+            float: right;
+        }
+
+        #last_news .col_right img {
+            border-radius: 50%;
+        }
+
+        #last_news .col_left {
+            float: left;
+            width: 200px;
+            padding-right: 13px;
+        }
+
+        #last_news p {
+            margin: 0;
+
+        }
+
+        .date {
+            font-size: 9pt;
+            color: #9aa3a8;
+        }
+    </style>
+
+
+    <div id="main">
+
+        <div id="sidbar_right">
+
+            <img class="images_sidbar" src="images/pelasko.jpg">
+
+            <ul id="sidbar_right_ul">
+
+                <li>
+
+                    <a>
+
+                        <img class="images_sidbar" src="images/mango.jpg">
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a>
+
+                        <img class="images_sidbar" src="images/bush.jpg">
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a>
+
+                        <img class="images_sidbar" src="images/union.jpg">
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a>
+
+                        <img class="images_sidbar" src="images/sennheiser.jpg">
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a>
+
+                        <img class="images_sidbar" src="images/kafsh.jpg">
+                    </a>
+
+                </li>
+
+            </ul>
+
+            <div id="last_news">
+
+
+                <h3 class="fontmd">
+                    تازه ترین خبر ها
+                </h3>
+                <ul style="padding: 0">
+                    <li>
+                        <a>
+
+
+                            <div class="col_right">
+
+                                <img src="images/Space-Elevator-60x60.jpg" style="width: 60px;height: 60px;">
+
+                                <div class="fontsm col_left">
+
+                                    <p>
+                                        آسانسور فضایی چیست و چگونه ساخته می‌شود؟
+                                        <p class="date">
+
+                                            سه شنبه 5 بهمن 1395 </p>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a>
+
+
+                            <div class="col_right">
+
+                                <img src="images/Mars-featured-60x60.jpg" style="width: 60px;height: 60px;">
+
+                            </div>
+                            <div class="fontsm col_left">
+                                <p>
+                                    کشف میکروب‌هایی که روی مریخ زنده می‌مانند
+                                </p>
+
+                                <p class="date">
+
+                                    دوشنبه 4 بهمن 1395
+                                </p>
+
+                            </div>
+
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+
+
+                            <div class="col_right">
+
+                                <img src="images/StarWarsRogueOne-60x60.jpg" style="width: 60px;height: 60px;">
+
+                                <div class="fontsm col_left">
+
+                                    <p>
+                                        فروش جنگ ستارگان جدید از مرز یک میلیارد دلار گذشت
+                                    </p>
+
+                                    <p class="date">
+
+                                        دوشنبه 4 بهمن 1395
+                                    </p>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+
+
+                            <div class="col_right">
+
+                                <img src="images/lavabit-appeals-government-order-60x60.jpg"
+                                    style="width: 60px;height: 60px;">
+
+                                <div class="fontsm col_left">
+
+                                    <p>
+                                        امن‌ترین سرویس ایمیل دنیا کار خود را از سر گرفت </p>
+
+                                    <p class="date">
+
+                                        دوشنبه 4 بهمن 1395
+                                    </p>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+            <style>
+                #brands_sidbar a {
+                    width: 140px;
+                    height: 100px;
+                    background: #fff;
+                    display: block;
+                    margin-bottom: 10px;
+                    line-height: 174px;
+                    border-radius: 4px;
+                    overflow: hidden;
+
+                }
+
+                #brands_sidbar a img {
+
+                    width: 140px;
+                    height: 80px;
+
+                }
+
+                #brands_sidbar a:nth-child(even) {
+                    float: left;
+                    margin-left: 0;
+                }
+
+                #brands_sidbar a:nth-child(odd) {
+                    float: right;
+                    margin-right: 0;
+                }
+            </style>
+
+            <div id="brands_sidbar" style="width: 290px;margin-top: 10px">
+                <a>
+                    <img src="images/x.vision.png">
+                </a>
+                <a>
+                    <img src="images/samsung-brand.jpg">
+                </a>
+
+
+                <a>
+                    <img src="images/pars-khazar-8cdaa4.png">
+                </a>
+                <a>
+                    <img src="images/Panasonic.png">
+                </a>
+
+
+                <a>
+                    <img src="images/snowa.png">
+                </a>
+                <a>
+                    <img src="images/lg.png">
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+        <style>
+            #content {
+                width: 890px;
+                float: left;
+            }
+
+            #slider {
+                height: 310px;
+                border-radius: 4px;
+                overflow: hidden;
+                box-shadow: 0 1px 3px rgba(255, 255, 255, .3);
+                background: #fff;
+            }
+
+            #slider_img {
+                height: 260px;
+            }
+
+            #slider_img img {
+                width: 100%;
+                height: 260px;
+            }
+
+            #slider_navigator {
+                height: 50px;
+                background: rgba(0, 0, 0, .4);
+            }
+
+            #slider_img a {
+                display: none;
+
+            }
+
+            #next {
+                display: block;
+                width: 19px;
+                height: 33px;
+                right: 15px;
+                top: 130px;
+                background: url(images/arrow-2.png);
+                z-index: 2;
+                background-position: 19px 33px;
+                position: absolute;
+                cursor: pointer;
+            }
+
+            #prev {
+                display: block;
+                width: 19px;
+                height: 33px;
+                left: 15px;
+                top: 130px;
+                background: url(images/arrow-2.png);
+                z-index: 2;
+                background-position: 19px 0;
+                position: absolute;
+                cursor: pointer
+            }
+
+            #slider_navigator ul {
+                padding: 0;
+                height: 100%;
+
+            }
+
+            #slider_navigator ul li {
+                width: 178px;
+                height: 100%;
+                float: right;
+
+            }
+
+            #slider_navigator ul li a {
+                width: 100%;
+                height: 100%;
+                display: block;
+                text-align: center;
+                line-height: 40px;
+                cursor: pointer;
+                color: #fff;
+
+            }
+
+            #slider #slider_navigator .active>a {
+                background: #fff;
+                color: #000;
+                position: relative;
+            }
+
+            #slider #slider_navigator .active>a::after {
+                position: absolute;
+                content: "";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 12.5px 13px 12.5px;
+                border-color: transparent transparent #ffffff transparent;
+                right: 0;
+                left: 0;
+                margin: 0 auto;
+                top: -13px;
+            }
+
+            #services-feature {
+                width: 100%;
+                height: 76px;
+                background: #fff;
+                margin: 10px 0;
+                border-radius: 4px;
+                overflow: hidden;
+                box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+
+            }
+
+            #services-feature ul {
+                padding: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            #services-feature ul li {
+                width: 178px;
+                height: 100%;
+                float: right;
+
+            }
+
+            #services-feature ul li a {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                line-height: 62px;
+                text-align: center;
+                font-size: 10pt;
+            }
+
+            #services-feature ul li a i {
+                display: inline-block;
+                background: url(images/slices.png) no-repeat center;
+                width: 34px;
+                height: 24px;
+                vertical-align: middle;
+                float: right;
+                margin-top: 20px;
+                margin-right: 10px;
+
+            }
+        </style>
+
+
+        <div id="content">
+            <div id="slider" style="position: relative">
+                <div id="slider_img">
+                    <a class="item">
+                        <img src="images/slider1.jpg">
+                    </a>
+
+                    <a class="item">
+                        <img src="images/slider2.jpg">
+                    </a>
+
+                    <a class="item">
+                        <img src="images/slider3.jpg">
+                    </a>
+
+                    <a class="item">
+                        <img src="images/slider4.jpg">
+                    </a>
+                    <a class="item">
+                        <img src="images/slider5.jpg">
+                    </a>
+
+                    <span id="next"></span>
+
+
+                    <span id="prev"></span>
+
+
+                </div>
+
+                <div id="slider_navigator">
+
+                    <ul>
+                        <li>
+                            <a>
+                                نوشیدنی ساز زمستانی
+                            </a>
+
+                        </li>
+                        <li>
+                            <a>
+                                محصولات لگو
+                            </a>
+
+                        </li>
+                        <li>
+                            <a>
+                                محصولات Salmon
+                            </a>
+
+                        </li>
+                        <li>
+                            <a>
+                                موبایل های HTC
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a>
+                                digistyle
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+
+                </div>
+
+            </div>
+
+            <div id="services-feature">
+                <ul>
+                    <li>
+
+                        <a>
+                            <i style="background-position: -316px -476px">
+
+
+                            </i>
+
+                            تحویل اکسپرس
+                        </a>
+                    </li>
+
+                    <li>
+
+                        <a>
+                            <i style="background-position: -210px -473px">
+
+
+                            </i>
+
+                            7 روز ضمانت بازگشت
+                        </a>
+                    </li>
+
+                    <li>
+
+                        <a>
+                            <i style="background-position: -263px -474px">
+
+
+                            </i>
+
+
+                            پرداخت در محل
+                        </a>
+                    </li>
+
+                    <li>
+
+                        <a>
+                            <i style="background-position: -104px -474px">
+
+
+                            </i>
+
+                            تضمین بهترین قیمت
+
+                        </a>
+                    </li>
+
+                    <li>
+
+                        <a>
+                            <i style="background-position: -157px -474px">
+
+
+                            </i>
+
+                            ضمانت اصل بودن کالا
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+
+            <style>
+                #slider2 {
+                    width: 100%;
+                    height: 380px;
+                    background: #fff;
+                    border-radius: 4px;
+                    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+                    overflow: hidden;
+                    cursor: pointer;
+                    position: relative;
+
+                }
+
+                #slider2_navigator {
+                    width: 185px;
+                    height: 100%;
+                    float: left;
+                    border: 1px solid #eee;
+                    background: #f6f6f6;
+
+                }
+
+                #slider2_content {
+                    float: right;
+                    width: 703px;
+                    height: 100%;
+
+                }
+
+                #slider2_navigator ul {
+                    padding: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                #slider2_navigator ul li {
+                    width: 100%;
+                    height: 38px;
+                    float: right;
+
+                }
+
+                #slider2_navigator ul li a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    line-height: 35px;
+                    font-size: 11pt;
+
+                }
+
+                .slider2_content_right {
+                    float: right;
+                    width: 305px;
+                    height: 100%;
+                }
+
+                .slider2_content_left {
+                    float: left;
+                    width: 398px;
+                    height: 100%;
+                    position: relative;
+                }
+
+                .slider2_content_left p {
+                    width: 300px;
+                    height: 50px;
+                    text-align: center;
+                    left: 0;
+                    right: 0;
+                    margin: 30px auto;
+                }
+
+                .slider2_content a {
+                    display: none;
+
+                }
+
+                .slider2_content_left img {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                }
+
+                .slider2_content_right .title {
+                    color: red;
+                    padding-right: 35px;
+                    font-size: 18px;
+
+                }
+
+                .slider2_content_right .price_info {
+
+                    height: 35px;
+                    margin-right: 30px;
+                }
+
+                .slider2_content_right .price_info_old {
+                    width: 75px;
+                    height: 100%;
+                    background: #afafaf;
+                    float: right;
+                    position: relative;
+                    text-align: center;
+                    font-size: 21px;
+                    color: #fff;
+                }
+
+                .slider2_content_right .price_info_old::before {
+                    position: absolute;
+                    content: "";
+                    width: 95%;
+                    border-bottom: 1px solid #525252;
+                    height: 0;
+                    left: 0;
+                    top: 16px;
+                    transform: rotate(-25deg);
+                }
+
+                .slider2_content_right .price_info_old::after {
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 8px 12px 8px 0;
+                    border-color: transparent #afafaf transparent transparent;
+                    left: -11px;
+                    top: 9px;
+                    z-index: 2;
+                }
+
+                .slider2_content_right .price_info_new {
+                    width: 155px;
+                    height: 100%;
+                    background: #ff3a3c;
+                    float: right;
+                    margin-right: 2px;
+                    color: #fff;
+                    font-size: 21px;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 15px;
+                }
+
+                .slider2_content_right .price_info_new::before {
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 8px 12px 8px 0;
+                    border-color: transparent #ffffff transparent transparent;
+                    right: 0;
+                    top: 9px;
+                }
+
+                .description {
+                    float: right;
+                    width: 100%;
+                    margin: 0;
+                    font-size: 11pt;
+                }
+
+                .flipTimer {
+                    position: absolute;
+                    transform: scale(.3);
+                    top: 265px;
+                    right: -140px;
+                }
+
+                .flipTimer,
+                .flipTimer div {
+                    direction: ltr !important;
+                }
+
+                .slider2_finished {
+                    width: 703px;
+                    height: 100%;
+                    display: none;
+                    position: absolute;
+                    background: rgba(0, 0, 0, .2);
+                    text-align: center;
+                    line-height: 7;
+                    color: red;
+                    font-size: 35pt;
+                    top: 0;
+                    right: 0;
+                    z-index: 3;
+                    cursor: default;
+                }
+
+                #slider2_navigator .active {
+                    background: #ff3a3c;
+                    color: #fff;
+                    position: relative;
+
+                }
+
+                #slider2_navigator .active::after {
+                    position: absolute;
+                    top: 0;
+                    left: 185px;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 19px 0 19px 17px;
+                    border-color: transparent transparent transparent #ff3a3c;
+
+                }
+
+                .sliderscroll {
+                    width: 100%;
+                    height: 310px;
+                    background: #fff;
+                    margin-top: 10px;
+                    border-radius: 4px;
+                    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+                    overflow: hidden;
+
+                }
+
+                .sliderscroll h3 {
+                    width: 100%;
+                    height: 35px;
+                    margin: 0;
+                    background: #f7f9fa;
+                    font-weight: normal;
+                    font-size: 12pt;
+                    padding-right: 10px;
+                    padding-top: 3px;
+                    color: #5e5e5e;
+                }
+
+                .sliderscroll_content {
+                    width: 100%;
+                    height: 272px;
+
+                }
+
+                .sliderscroll_prev {
+                    width: 35px;
+                    height: 100%;
+                    float: right;
+
+                }
+
+                .sliderscroll_main {
+
+                    width: 820px;
+                    height: 100%;
+                    float: right;
+
+                }
+
+                .sliderscroll_next {
+                    width: 35px;
+                    height: 100%;
+                    float: right;
+
+                }
+
+                .prev {
+                    display: block;
+                    width: 15px;
+                    height: 33px;
+                    background: url(images/slices.png);
+                    background-position: -852px -677px;
+                    position: relative;
+                    top: 96px;
+                    right: 12px;
+                    cursor: pointer;
+                }
+
+                .next {
+                    display: block;
+                    width: 15px;
+                    height: 33px;
+                    background: url(images/slices.png);
+                    background-position: -813px -677px;
+                    position: relative;
+                    top: 96px;
+                    right: 12px;
+                    cursor: pointer;
+                }
+
+                .sliderscroll_main ul {
+                    padding: 0;
+                    height: 100%;
+                    overflow: hidden;
+                }
+
+                .sliderscroll_main li {
+                    width: 205px;
+                    height: 100%;
+                    float: right;
+                    padding: 0;
+                }
+
+                .sliderscroll_main a {
+                    text-align: center;
+                    display: block;
+                    height: 100%;
+                    margin-top: 15px;
+                }
+
+                .sliderscroll_main p {
+
+                    margin-top: 1px;
+                    margin-bottom: 1px;
+                    text-align: center;
+
+                }
+
+                .price {
+                    color: green;
+                    font-size: 9.5pt;
+
+                }
+
+                #shortcuts {
+                    padding: 0;
+                    margin-top: 10px;
+                    width: 100%;
+                    height: 588px;
+
+                }
+
+                #shortcuts li {
+                    float: right;
+                    margin-left: 10px;
+
+                }
+
+                #shortcuts img {
+                    border-radius: 4px;
+                    box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+                    overflow: hidden;
+
+                }
+
+                #shortcuts a {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+
+                }
+
+                .lastbox {
+                    margin-left: 0 !important;
+                }
+            </style>
+            <div id="slider2">
+
+                <div id="slider2_navigator">
+
+                    <ul>
+                        <li>
+                            <a>
+                                گوشی موبایل سونی
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                تبلت ایسوس
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                دوربین دیجیتال فوجی فیلم
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                شارژر همراه
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                تصفیه آب
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                صندلی سفری تاشو
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                صندلی خودرو
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                مداد رنگی 12 تایی
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                ویژه اعضای دیجی‌کالا
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                ویژه اعضای دیجی‌کالا
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="flipTimer">
+
+                    <div class="hours"></div>
+                    <div class="minutes"></div>
+                    <div class="seconds"></div>
+
+
+                </div>
+                <div class="slider2_finished">تمام شد !</div>
+
+                <div class="slider2_content">
+
+                    <a class="item">
+                        <div class="slider2_content_right">
+                            <p class="title">پیشنهاد شگفت انگیز امروز</p>
+
+                            <div class="price_info">
+
+                                <div class="price_info_old">
+                                    759
+
+
+                                </div>
+
+                                <div class="price_info_new">
+                                    659 هزار تومان
+
+
+                                </div>
+                                <p class="description">استفاده از دو پردازنده چهار هسته‌ای</p>
+                                <p class="description">پشتیبانی از قابلیت شارژ سریع باتری</p>
+                                <p class="description">3 گیگابایت حافظه رم</p>
+
+                            </div>
+
+
+                        </div>
+                        <div class="slider2_content_left">
+                            <p>
+                                گوشی موبایل سونی مدل Xperia XZ دو سیم کارت ظرفیت 64 گیگابایت
+                            </p>
+                            <img src="images/sony-xperia-xz-dual-sim-64gb-mobile-phone-557d31.jpg">
+
+
+                        </div>
+                    </a>
+
+                    <a class="item">
+                        <div class="slider2_content_right">
+                            <p class="title">پیشنهاد شگفت انگیز امروز</p>
+
+                            <div class="price_info">
+
+                                <div class="price_info_old">
+                                    1.400
+
+
+                                </div>
+
+                                <div class="price_info_new">
+                                    1.150 هزار تومان
+
+
+                                </div>
+                                <p class="description">ظرفیت هارد 500 گیگ</p>
+                                <p class="description">ریجن 2</p>
+                                <p class="description">مدل slim</p>
+
+                            </div>
+
+
+                        </div>
+                        <div class="slider2_content_left">
+                            <p>
+                                کنسول بازی Playstation 4 Slim
+                            </p>
+                            <img src="images/gameconsole-sony-playstation-4-slim-cuh-2016a-region-2-500-gb.jpg">
+
+
+                        </div>
+                    </a>
+
+                    <a class="item">
+                        <div class="slider2_content_right">
+                            <p class="title">پیشنهاد شگفت انگیز امروز</p>
+
+                            <div class="price_info">
+
+                                <div class="price_info_old">
+                                    1.200
+
+
+                                </div>
+
+                                <div class="price_info_new">
+                                    1.100 هزار تومان
+
+
+                                </div>
+                                <p class="description"> مجهز به سخت‌افزاری فوق العاده قدرتمند</p>
+                                <p class="description">مقدار رم کافی</p>
+                                <p class="description">بدنه فلزی و حسگر اثرانگشت</p>
+
+                            </div>
+
+
+                        </div>
+                        <div class="slider2_content_left">
+                            <p>
+                                گوشی موبایل هوآوی مدل Nova Plus دو سیم‌ کارت
+                            </p>
+                            <img src="images/huawei-nova-plus-dual-sim-mobile-phone-f069b2.jpg">
+
+
+                        </div>
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+            <div class="sliderscroll">
+
+                <h3>فقط در دیجی کالا</h3>
+                <div class="sliderscroll_content">
+
+                    <div class="sliderscroll_prev">
+                        <span class="prev" onclick="sliderscroll('right',this);"></span>
+                    </div>
+                    <div class="sliderscroll_main">
+                        <ul>
+                            <li>
+                                <a>
+                                    <img src="images/Adata-HC660-SSD---1TB.jpg">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">هارد ديسک اکسترنال اي ديتا</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="images/Karcher-VC2-Vacuum-Cleaner-2ba502.JPG">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">جاروبرقي کرشر مدل VC2</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="images/Notebook-Alienware-17-AW17R3.jpg">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">هارد ديسک اکسترنال اي ديتا</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="images/Emtec-Universal-Batman-V-Superman-5000mAh-Power-Bank.jpg">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">هارد ديسک اکسترنال اي ديتا</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="images/Karcher-VC2-Vacuum-Cleaner-2ba502.JPG">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">جاروبرقي کرشر مدل VC2</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="images/Adata-HC660-SSD---1TB.jpg">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">هارد ديسک اکسترنال اي ديتا</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="images/Karcher-VC2-Vacuum-Cleaner-2ba502.JPG">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">جاروبرقي کرشر مدل VC2</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="images/Notebook-Alienware-17-AW17R3.jpg">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">هارد ديسک اکسترنال اي ديتا</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+
+
+                        </ul>
+
+
+                    </div>
+                    <div class="sliderscroll_next">
+
+                        <span class="next" onclick="sliderscroll('left',this);"></span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <ul id="shortcuts">
+                <li>
+                    <a>
+                        <img src="images/shortcut1.jpg">
+
+                    </a>
+                </li>
+                <li class="lastbox">
+                    <a>
+                        <img src="images/shortcut2.jpg">
+
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="images/shortcut3.jpg">
+
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="images/shortcut4.jpg">
+
+                    </a>
+                </li>
+                <li class="lastbox">
+                    <a>
+                        <img src="images/shortcut5.jpg">
+
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="images/shortcut6.jpg">
+
+                    </a>
+                </li>
+                <li class="lastbox">
+                    <a>
+                        <img src="images/shortcut7.jpg">
+
+                    </a>
+                </li>
+
+
+            </ul>
+
+
+            <div class="sliderscroll">
+
+                <h3>پرفروشترین ها</h3>
+                <div class="sliderscroll_content">
+
+                    <div class="sliderscroll_prev">
+                        <span class="prev" onclick="sliderscroll('right',this);"></span>
+                    </div>
+                    <div class="sliderscroll_main">
+                        <ul>
+                            <li>
+                                <a>
+                                    <img src="images/Adata-HC660-SSD---1TB.jpg">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">هارد ديسک اکسترنال اي ديتا</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="images/Karcher-VC2-Vacuum-Cleaner-2ba502.JPG">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">جاروبرقي کرشر مدل VC2</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="images/Notebook-Alienware-17-AW17R3.jpg">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">هارد ديسک اکسترنال اي ديتا</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="images/Emtec-Universal-Batman-V-Superman-5000mAh-Power-Bank.jpg">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">هارد ديسک اکسترنال اي ديتا</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="images/Karcher-VC2-Vacuum-Cleaner-2ba502.JPG">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">جاروبرقي کرشر مدل VC2</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="images/Adata-HC660-SSD---1TB.jpg">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">هارد ديسک اکسترنال اي ديتا</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="images/Karcher-VC2-Vacuum-Cleaner-2ba502.JPG">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">جاروبرقي کرشر مدل VC2</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="images/Notebook-Alienware-17-AW17R3.jpg">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">هارد ديسک اکسترنال اي ديتا</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+
+
+                        </ul>
+
+
+                    </div>
+                    <div class="sliderscroll_next">
+
+                        <span class="next" onclick="sliderscroll('left',this);"></span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="sliderscroll">
+
+                <h3>جدیدترین ها</h3>
+                <div class="sliderscroll_content">
+
+                    <div class="sliderscroll_prev">
+                        <span class="prev" onclick="sliderscroll('right',this);"></span>
+                    </div>
+                    <div class="sliderscroll_main">
+                        <ul>
+                            <li>
+                                <a>
+                                    <img src="images/Adata-HC660-SSD---1TB.jpg">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">هارد ديسک اکسترنال اي ديتا</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="images/Karcher-VC2-Vacuum-Cleaner-2ba502.JPG">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">جاروبرقي کرشر مدل VC2</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="images/Notebook-Alienware-17-AW17R3.jpg">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">هارد ديسک اکسترنال اي ديتا</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="images/Emtec-Universal-Batman-V-Superman-5000mAh-Power-Bank.jpg">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">هارد ديسک اکسترنال اي ديتا</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="images/Karcher-VC2-Vacuum-Cleaner-2ba502.JPG">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">جاروبرقي کرشر مدل VC2</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="images/Adata-HC660-SSD---1TB.jpg">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">هارد ديسک اکسترنال اي ديتا</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="images/Karcher-VC2-Vacuum-Cleaner-2ba502.JPG">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">جاروبرقي کرشر مدل VC2</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="images/Notebook-Alienware-17-AW17R3.jpg">
+                                    <img src="images/exclusive-blue.png">
+                                    <p class="fontsm">هارد ديسک اکسترنال اي ديتا</p>
+                                    <p class="fontsm price">تومان 299,000</p>
+
+                                </a>
+                            </li>
+
+
+                        </ul>
+
+
+                    </div>
+                    <div class="sliderscroll_next">
+
+                        <span class="next" onclick="sliderscroll('left',this);"></span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <style>
+            #suggest {
+                width: 100%;
+                height: 630px;
+                background: #fff;
+                display: inline-block;
+                margin-top: 90px;
+            }
+
+            #suggest_title {
+                background: #cccccc;
+                width: 100%;
+                height: 70px;
+            }
+
+            .sg {
+                line-height: 65px;
+                font-size: 20px;
+                padding-right: 80px;
+                color: #43453f;
+
+            }
+
+            #suggest_content {
+                width: 100%;
+                height: 559px;
+            }
+
+            #suggest_content_right {
+                width: 430px;
+                height: 560px;
+                float: right;
+
+            }
+
+            #suggest_content_right ul {
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                margin-top: 70px;
+
+            }
+
+            #suggest_content_right ul li {
+                width: 100%;
+                height: 120px;
+                float: right;
+                position: relative;
+
+            }
+
+            #suggest_content_right ul li a {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                vertical-align: middle;
+                float: right;
+                line-height: 10px;
+            }
+
+            #suggest_content_right ul li a span {
+                display: inline-block;
+                position: absolute;
+                vertical-align: middle;
+                top: 35px;
+                padding-right: 10px;
+            }
+
+            #suggest_content_right ul li a img {
+                width: 75px;
+                height: 75px;
+
+            }
+
+            #suggest_content_left {
+                width: 919px;
+                height: 560px;
+                float: left;
+
+            }
+
+            #suggest_title_right {
+                width: 500px;
+                height: 100%;
+                float: right;
+            }
+
+            #suggest_content_left ul {
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                margin-right: 50px;
+                margin-top: 5px;
+
+            }
+
+            #suggest_content_left ul li {
+                float: right;
+                width: 170px;
+                height: 170px;
+                margin: 60px 15px;
+                box-shadow: 0 3px 2px #eee;
+
+            }
+
+            #suggest_content_left ul li a img {
+                padding-right: 35px;
+                width: 80px;
+                height: 80px;
+            }
+
+            #suggest_content_left ul li a p {
+                margin: 0;
+                text-align: center;
+
+            }
+
+            #suggest_content_left ul li a>p {
+                font-size: 10pt;
+                text-align: center;
+                margin-bottom: 10px;
+
+            }
+        </style>
+
+
+    </div>
+
+    <div id="suggest">
+        <div id="suggest_title">
+            <div id="suggest_title_right"><span class="sg">چون از این گروه ها دیدن کرده‌اید،</span></div>
+            <div id="suggest_title_left"><span class="sg">احتمالا مایل به بررسی این محصولات نیز هستید.</span></div>
+
+
+        </div>
+
+        <div id="suggest_content">
+
+            <div id="suggest_content_right">
+
+                <ul>
+
+                    <li>
+                        <a>
+                            <img src="images/sg_right1.jpg">
+                            <span>کالای دیجیتال</span>
+
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/sg_right2.jpg">
+                            <span>لوازم خودرو</span>
+
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/sg_right3.jpg">
+                            <span>ابزار و الکترونیک</span>
+
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/sg_right4.jpg">
+                            <span>لوازم خانگی</span>
+
+
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+            <div id="suggest_content_left">
+
+                <ul>
+                    <li>
+                        <a>
+                            <img src="images/sg_right1.jpg">
+                            <p>گوشي موبايل هوآوي مدل Honor 8 دو سيم کارت </p>
+                            <p class="price fontsm">,540,000 تومان</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/sg_right2.jpg">
+                            <p>گوشي موبايل هوآوي مدل Honor 8 دو سيم کارت </p>
+                            <p class="price fontsm">,540,000 تومان</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/sg_right3.jpg">
+                            <p>گوشي موبايل هوآوي مدل Honor 8 دو سيم کارت </p>
+                            <p class="price fontsm">,540,000 تومان</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/sg_right4.jpg">
+                            <p>گوشي موبايل هوآوي مدل Honor 8 دو سيم کارت </p>
+                            <p class="price fontsm">,540,000 تومان</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/sg_right4.jpg">
+                            <p>گوشي موبايل هوآوي مدل Honor 8 دو سيم کارت </p>
+                            <p class="price fontsm">,540,000 تومان</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/sg_right3.jpg">
+                            <p>گوشي موبايل هوآوي مدل Honor 8 دو سيم کارت </p>
+                            <p class="price fontsm">,540,000 تومان</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/sg_right2.jpg">
+                            <p>گوشي موبايل هوآوي مدل Honor 8 دو سيم کارت </p>
+                            <p class="price fontsm">,540,000 تومان</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/sg_right1.jpg">
+                            <p>گوشي موبايل هوآوي مدل Honor 8 دو سيم کارت </p>
+                            <p class="price fontsm">,540,000 تومان</p>
+                        </a>
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <style>
+        #footer {
+            width: 100%;
+            height: 300px;
+        }
+
+        #footer a {
+            cursor: pointer;
+        }
+
+        #footer_top {
+            width: 100%;
+            height: 45px;
+            background: #6d717a;
+
+        }
+
+        #footer_top_right {
+            width: 400px;
+            height: 100%;
+            float: right;
+            color: #fff;
+            padding-right: 40px;
+            line-height: 35px;
+            font-size: 18px;
+
+        }
+
+        #footer_top_left {
+            width: 700px;
+            height: 100%;
+            float: left;
+            color: #fff;
+
+        }
+
+        #footer_top_left ul {
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #footer_top_left ul li {
+            width: 200px;
+            height: 100%;
+            float: left;
+            position: relative;
+            line-height: 35px;
+        }
+
+        #footer_top_left i {
+
+            background: url(images/slices.png);
+            width: 17px;
+            height: 17px;
+            display: inline-block;
+            position: absolute;
+            top: 11px;
+            margin-right: 15px;
+
+        }
+
+        #footer_buttom {
+            width: 100%;
+            height: 255px;
+            background: #f7f8fa;
+
+        }
+
+        #footer_buttom_right {
+            width: 350px;
+            height: 100%;
+            float: right;
+        }
+
+        #footer_buttom_right ul {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        #footer_buttom_right ul li {
+            display: block;
+            width: 200px;
+            height: 40px;
+            position: relative;
+            margin-top: 10px;
+            color: #777;
+        }
+
+        .footertitle {
+            display: block;
+            float: right;
+            width: 100%;
+            height: 100%;
+            color: #373737;
+            font-size: 14pt;
+        }
+
+        #footer_buttom_center {
+            width: 250px;
+            height: 100%;
+            float: right;
+
+        }
+
+        #footer_buttom_center ul {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        #footer_buttom_center ul li {
+            display: block;
+            width: 200px;
+            height: 40px;
+            position: relative;
+            margin-top: 10px;
+            color: #777;
+        }
+
+        #footer_buttom_left {
+            width: 600px;
+            height: 100%;
+            float: left;
+        }
+
+        #footer_buttom_left>p {
+            font-size: 14pt;
+        }
+
+        #footer_buttom_left .email input {
+            width: 430px;
+            height: 35px;
+            border: 1px solid #ccc;
+        }
+
+        #footer_buttom_left .email .btn {
+            width: 110px;
+            height: 38px;
+            background: #2196f3;
+            display: block;
+            float: left;
+            margin-left: 30px;
+            margin-top: 1px;
+            border-radius: 4px;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, .2);
+            text-align: center;
+            color: #fff;
+            line-height: 30px;
+
+        }
+    </style>
+
+    <footer id="footer">
+
+        <div id="footer_top">
+
+            <div id="footer_top_right">
+
+                <span>۷ روز هفته، ۲۴ ساعته پاسخگوی شما هستیم.</span>
+            </div>
+            <div id="footer_top_left">
+
+                <ul>
+                    <li>
+
+                        <span>
+                            info@digikala.com
+
+                        </span>
+                        <i style="background-position: -321px -425px;"></i>
+
+                    </li>
+                    <li>
+
+                        <a>
+                            سوالات متداول
+
+                        </a>
+                        <i style="background-position: -361px -423px;"></i>
+
+                    </li>
+                    <li>
+
+                        <a>
+                            ۶۱۹۳۰۰۰۰ - ۰۲۱
+                            <i style="background-position: -399px -424px">
+
+
+                            </i>
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+        </div>
+
+
+        <div id="footer_buttom">
+
+            <div id="footer_buttom_right">
+                <ul>
+                    <li>
+                        <a class="footertitle">راهنمای خرید از دیجی کالا</a>
+                    </li>
+                    <li>
+                        <a>ثبت سفارش</a>
+                    </li>
+                    <li>
+                        <a>رویه های ارسال سفارش</a>
+                    </li>
+                    <li>
+                        <a>شیوه های پرداخت</a>
+                    </li>
+                    <li>
+                        <a>معرفی دیجی بن</a>
+                    </li>
+                </ul>
+
+
+            </div>
+            <div id="footer_buttom_center">
+
+                <ul>
+                    <li>
+                        <a class="footertitle">خدمات مشتریان</a>
+                    </li>
+                    <li>
+                        <a>پاسخ به پرسش های متداول</a>
+                    </li>
+                    <li>
+                        <a>رویه های باز گرداندن کالا</a>
+                    </li>
+                    <li>
+                        <a>شرایط استفاده</a>
+                    </li>
+                    <li>
+                        <a>حریم خصوصی</a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div id="footer_buttom_left">
+
+                <p>اولین نفری که مطلع میشود،باشید!</p>
+
+                <div class="email">
+
+                    <input type="text">
+                    <span class="btn">تایید ایمیل</span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </footer>
+
+
+    <script>
+        function sliderscroll(direction, tag) {
+
+
+            var span_tag = $(tag);
+            var sliderScrollTag = span_tag.parents('.sliderscroll');
+            var sliderScrollUl = sliderScrollTag.find('.sliderscroll_main ul');
+            var sliderScrollItems = sliderScrollUl.find('li');
+            var sliderScrollItemsNumbers = sliderScrollItems.length;
+            var sliderScrollNumbers = Math.ceil(sliderScrollItemsNumbers / 4);
+            var maxNegativeMargin = -(sliderScrollNumbers - 1) * 830;
+
+            sliderScrollUl.css('width', sliderScrollItemsNumbers * 205);
+
+
+            var marginRightNew;
+            var marginRightOld = sliderScrollUl.css('margin-right');
+            marginRightOld = parseFloat(marginRightOld);
+
+
+            if (direction == 'left') {
+
+                marginRightNew = marginRightOld - 830;
+
+            }
+
+            if (direction == 'right') {
+                marginRightNew = marginRightOld + 830;
+
+            }
+            if (marginRightNew < maxNegativeMargin) {
+                marginRightNew = 0;
+            }
+            if (marginRightNew > 0) {
+                marginRightNew = maxNegativeMargin;
+            }
+
+
+            sliderScrollUl.animate({
+                'marginRight': marginRightNew
+            }, 1000);
+
+
+        }
+
+
+        $('.next').click(function () {
+
+            sliderscroll('left');
+
+        })
+        $('.prev').click(function () {
+
+            sliderscroll('right');
+
+        })
+
+
+        $('.flipTimer').flipTimer({
+
+            direction: 'down',
+            date: 'January 31,2017 17:22:10',
+
+            callback: function () {
+                $('.slider2_content_right').css('opacity', .4);
+                $('.slider2_content_left').css('opacity', .4);
+
+
+                $('.slider2_finished').fadeIn(100);
+
+
+            }
+
+
+        })
+
+
+        var sliderTag = $('#slider');
+        var sliderItems = sliderTag.find('.item');
+        var numItems = sliderItems.length;
+        var nextSlide = 1;
+        var timeOut = 5000;
+        var sliderNavigators = sliderTag.find('#slider_navigator ul li');
+
+
+        function slider() {
+
+            if (nextSlide > numItems) {
+
+                nextSlide = 1;
+            }
+
+            if (nextSlide < 1) {
+                nextSlide = numItems;
+            }
+
+
+            sliderItems.fadeOut(0);
+
+            sliderItems.eq(nextSlide - 1).fadeIn(100);
+            sliderNavigators.removeClass('active');
+            sliderNavigators.eq(nextSlide - 1).addClass('active');
+
+            nextSlide++;
+
+        }
+
+        slider();
+        var sliderInterval = setInterval(slider, timeOut);
+        sliderTag.mouseleave(function () {
+            clearInterval(sliderInterval);
+            sliderInterval = setInterval(slider, timeOut);
+
+
+        })
+
+
+        function goTonext() {
+            slider();
+
+        }
+
+        $('#slider #next').click(function () {
+
+            goTonext();
+
+        });
+
+
+        function goToprev() {
+
+            nextSlide = nextSlide - 2;
+            slider();
+
+        }
+
+
+        $('#slider #prev').click(function () {
+
+            goToprev();
+
+        })
+
+
+        function goToslide(index) {
+            nextSlide = index;
+            slider();
+        }
+
+
+        $('#slider #slider_navigator li').hover(function () {
+            clearInterval(sliderInterval);
+
+            var index = $(this).index();
+            goToslide(index + 1);
+        }, function () {
+
+        });
+
+        /*main_slider*/
+
+        var sliderTag2 = $('#slider2');
+        var sliderItems2 = sliderTag2.find('.item');
+        var numItems2 = sliderItems2.length;
+        var nextSlide2 = 1;
+        var timeOut2 = 5000;
+        var sliderNavigators2 = sliderTag2.find('#slider2_navigator ul li');
+
+
+        function slider2() {
+
+            if (nextSlide2 > numItems2) {
+
+                nextSlide2 = 1;
+            }
+
+            if (nextSlide2 < 1) {
+                nextSlide2 = numItems2;
+            }
+
+
+            sliderItems2.fadeOut(0);
+
+            sliderItems2.eq(nextSlide2 - 1).fadeIn(100);
+            sliderNavigators2.removeClass('active');
+            sliderNavigators2.eq(nextSlide2 - 1).addClass('active');
+
+            nextSlide2++;
+
+        }
+
+        slider2();
+        var sliderInterval2 = setInterval(slider2, timeOut2);
+        sliderTag2.mouseleave(function () {
+            clearInterval(sliderInterval2);
+            sliderInterval2 = setInterval(slider2, timeOut2);
+
+
+        })
+
+
+        function goToslide2(index) {
+            nextSlide2 = index;
+            slider2();
+        }
+
+
+        $('#slider2 #slider2_navigator li').click(function () {
+            clearInterval(sliderInterval2);
+
+            var index = $(this).index();
+            goToslide2(index + 1);
+        });
+
+        /*end_slider2*/
+
+
+        var timer = {};
+        $('#menu_top li').hover(function () {
+
+
+            var tag = $(this);
+            var timerAttr = tag.attr('data-time');
+            clearTimeout(timer[timerAttr]);
+            timer[timerAttr] = setTimeout(function () {
+                $(' > ul', tag).fadeIn(0);
+                tag.addClass('active-menu');
+                $(' > .submenu3', tag).fadeIn(0);
+
+            }, 500);
+
+
+        }, function () {
+
+            var tag = $(this);
+            var timerAttr = tag.attr('data-time');
+            clearTimeout(timer[timerAttr]);
+            timer[timerAttr] = setTimeout(function () {
+                $(' > ul', tag).fadeOut(0);
+                tag.removeClass('active-menu');
+                $(' > .submenu3', tag).fadeOut(0);
+
+
+            }, 600);
+
+
+        })
+    </script>
+
+
+</body>
+
+</html>
